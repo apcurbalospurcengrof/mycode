@@ -11,8 +11,6 @@ public class MyCodeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MyCodeApplication.class, args);
 
-		PairOfWordFinder pairOfWordFinder = new PairOfWordFinder();
-		pairOfWordFinder.pairOfWordCounter(3);
 	/*	Options options = new Options();
 
 		Option sourcePath = Option.builder("i").longOpt("inputpath")

@@ -14,14 +14,14 @@ import java.time.Duration;
 @Configuration
 public class FileWatcherConfig {
 
- //   @Value("${monitoring-folder}")
-  //  private String folderPath;
+    //   @Value("${monitoring-folder}")
+    //  private String folderPath;
 
     @Bean
     public FileSystemWatcher fileSystemWatcher() {
         FileSystemWatcher fileSystemWatcher = new FileSystemWatcher(true, Duration.ofMillis(30000L), Duration.ofMillis(3000L));
         fileSystemWatcher.addSourceDirectory(new File("C:\\Users\\bozso\\OneDrive\\Desktop\\incoming"));
-        fileSystemWatcher.addListener( new FileListener());
+        fileSystemWatcher.addListener(new FileListener());
         fileSystemWatcher.start();
         System.out.println("started fileSystemWatcher");
         return fileSystemWatcher;
