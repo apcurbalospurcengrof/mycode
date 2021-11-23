@@ -1,5 +1,6 @@
 package com.incomingtask.mycode;
 
+import com.incomingtask.mycode.service.PairOfWordFinder;
 import org.apache.commons.cli.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,6 +10,9 @@ public class MyCodeApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MyCodeApplication.class, args);
+
+		PairOfWordFinder pairOfWordFinder = new PairOfWordFinder();
+		pairOfWordFinder.pairOfWordCounter(3);
 	/*	Options options = new Options();
 
 		Option sourcePath = Option.builder("i").longOpt("inputpath")

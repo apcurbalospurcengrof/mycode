@@ -14,8 +14,8 @@ import java.time.Duration;
 @Configuration
 public class FileWatcherConfig {
 
-    @Value("${monitoring-folder}")
-    private String folderPath;
+ //   @Value("${monitoring-folder}")
+  //  private String folderPath;
 
     @Bean
     public FileSystemWatcher fileSystemWatcher() {
