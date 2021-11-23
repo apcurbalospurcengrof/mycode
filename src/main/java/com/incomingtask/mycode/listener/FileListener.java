@@ -11,7 +11,8 @@ import java.nio.file.StandardOpenOption;
 import java.util.Set;
 
 @Component
-public class FileListener {
+public class FileListener implements FileChangeListener{
+    @Override
     public void onChange(Set<ChangedFiles> changeSet) {
         for(ChangedFiles cfiles : changeSet) {
             for(ChangedFile cfile: cfiles.getFiles()) {
